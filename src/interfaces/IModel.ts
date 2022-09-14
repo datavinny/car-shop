@@ -1,9 +1,9 @@
 interface IModel<T> {
   create(obj:T):Promise<T | null>,
   read():Promise<T[]>,
-  readOne(str:string):Promise<T | null>,
-  update(str:string, obj:T):Promise<T | null>,
-  delete(str:string):Promise<T | null>,
+  readOne(_id:string):Promise<T | null>,
+  update(_id:string, obj:T):Promise<T | null>,
+  delete(_id:string):Promise<T | null>,
 }
 
 export { IModel };
