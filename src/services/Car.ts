@@ -15,13 +15,11 @@ class CarService implements IService<ICar> {
     if (!parsed.success) {
       throw parsed.error;
     }
-    const car = this._car.create(parsed.data);
-    return car;
+    return this._car.create(parsed.data);
   }
 
   public async read():Promise<ICar[]> {
-    const car = this._car.read();
-    return car;
+    return this._car.read();
   }
 
   public async readOne(_id: string):Promise<ICar | null> {
@@ -31,15 +29,11 @@ class CarService implements IService<ICar> {
   }
 
   public async update(_id: string, obj: ICar):Promise<ICar | null> {
-    await this.readOne(_id);
-    const car = await this._car.update(_id, obj);
-    return car;
+    return this._car.update(_id, obj);
   }
 
   public async delete(_id: string):Promise<ICar | null> {
-    await this.readOne(_id);
-    const car = await this._car.delete(_id);
-    return car;
+    return this._car.delete(_id);
   }
 }
 
