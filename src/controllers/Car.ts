@@ -16,13 +16,13 @@ class CarController {
   }
 
   public async readOne(req: Request, res: Response<ICar | null>) {
-    console.log(req.params);
     const result = await this._service.readOne(req.params.id);
     return res.status(200).json(result);
   }
 
   public async update(req: Request, res: Response<ICar | null>) {
     const result = await this._service.update(req.params.id, req.body);
+    console.log('result', result);
     return res.status(200).json(result);
   }
 
