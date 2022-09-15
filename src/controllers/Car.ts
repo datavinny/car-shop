@@ -22,13 +22,12 @@ class CarController {
 
   public async update(req: Request, res: Response<ICar | null>) {
     const result = await this._service.update(req.params.id, req.body);
-    console.log('result', result);
     return res.status(200).json(result);
   }
 
   public async delete(req: Request, res: Response<ICar | null>) {
-    const result = await this._service.update(req.params.id, req.body);
-    return res.status(200).json(result);
+    await this._service.delete(req.params.id);
+    return res.status(204).json();
   }
 }
 
