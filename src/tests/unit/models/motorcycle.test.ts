@@ -3,10 +3,10 @@ import chai from 'chai';
 const { expect } = chai;
 import MotorcycleModel from '../../../models/Motorcycle';
 import { Model } from 'mongoose';
-import { motorcycleMock, motorcycleMockWithId, motorcycleMockEmpty } from '../../mocks/motorcycleMock';
+import { motorcycleMock, motorcycleMockWithId } from '../../mocks/motorcycleMock';
 import { ZodError } from 'zod';
 
-describe('Car Model', () => {
+describe('Motorcycle Model', () => {
 const motorcycleModel = new MotorcycleModel();
 const ID = '4edd40c86762e0fb12000021'
 
