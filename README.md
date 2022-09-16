@@ -5,7 +5,7 @@
   Uma API com `CRUD` para gerenciar uma concessionária de veículos.
  
 ## 📌 Author
-- <p><a href="https://github.com/datavinny">Davi Freitas</a> (df828316@gmail.com)</p>
+- <p><a href="https://www.linkedin.com/in/davifreitass/">Davi Freitas</a></p>
 
 ## :wrench: Técnologias usadas
 
